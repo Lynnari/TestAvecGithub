@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Je de bâtons</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="accueil.css">
+	</head>
+	<body>
+		<nav></nav>
+		<div id="connexion">Se connecter
+			<form>
+				<p class="centered-with-flex"><label>Pseudo : </label> <input type="text" name="pseudo"></p>
+				<p class="centered-with-flex"><label>Mot de passe : </label><input type="password" name="password"></p>
+				<input type="submit" name="connexion" value="Connexion">
+			</form>
+		</div>
+		<div id="inscription">S'inscrire
+			<form>
+				<p class="centered-with-flex"><label>Email : </label><input type="mail" name="mail"></p>
+				<p class="centered-with-flex"><label>Pseudo : </label><input type="text" name="pseudo"></p>
+				<p class="centered-with-flex"><label>Mot de passe : </label><input type="password" name="password"></p>
+				<input type="submit" name="inscription" value="Inscription">
+			</form>
+		</div>
+		<div id="selection-adversaire">
+			CHOISISSEZ VOTRE ADVERSAIRE :
+			<ul>
+				<li></li> <!-- Ici on fera un ng-repeat avec les informations des utiisateurs enregistrées dans la BDD ; ng-click pour lancer la partie avec le joueur sélectionné -->
+			</ul>
+		</div>
+		<div id="affichage-jeu">
+			<!--
+			Partie centrale : affichage des bâtons et du nombre de bâtons restants
+			Parties joueurs en miroir : 
+				- Affichage du nom, de l'avatar et du pourcentage de victoires
+				- Affichage du nombre de bâtons récupérés par le joueur pendant la partie en cours
+			=> Ecran de jeu divisé en 5 sections
+			-->
+		</div>
+		<div id="stats">
+			<table>				
+				<tr>
+					<th>Pseudo</th>
+					<th>Parties jouées</th>
+					<th>Victoires</th>
+					<th>Pourcentage</th>
+				</tr>
+				<tr><!-- ng-repeat sur les joueurs en BDD avec options de tri (pseudo, parties jouées, parties gagnées, pourcentage de victoire) -->
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		<script src="angular.min.js"></script> 
+		<script type="text/javascript" src="accueil.js"></script>
+		<script type="text/javascript">
+			angular.bootstrap(document, ['jeu']);
+		</script>
+	</body>
+</html>
