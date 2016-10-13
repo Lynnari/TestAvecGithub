@@ -1,3 +1,7 @@
+body {
+	background: pink;
+}
+
 #inscription, #connexion, #selection-adversaire, #stats {
 	text-align: center;
 	margin: 20px;
